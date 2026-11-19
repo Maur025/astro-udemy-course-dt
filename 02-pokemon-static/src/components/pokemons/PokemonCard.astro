@@ -11,8 +11,9 @@ const pokemonId = url.trim().split("/").at(-2);
 ---
 
 <!-- href={`/pokemons/${name}`} -->
+<!-- href={`pokemon/${pokemonId}`} -->
 <a
-  href={`pokemon/${pokemonId}`}
+  href={`/pokemons/${name}`}
   class:list={["rounded flex flex-col justify-center items-center p-2", { border: !isBig }]}
 >
   <img
@@ -28,6 +29,8 @@ const pokemonId = url.trim().split("/").at(-2);
       {
         "text-4xl text-blue-300": isBig,
       },
-    ]}>#{pokemonId} {name}</span
+    ]}
   >
+    #{pokemonId} {name}
+  </span>
 </a>
